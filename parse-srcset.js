@@ -50,13 +50,10 @@ function parseSrcset(input) {
 	// http://jsperf.com/whitespace-character/5
 	function isSpace(c){
 		return (c === '\u0020' || // space
-            c === '\u0009' || // horizontal tab
-            c === '\u000A' || // new line
-            c === '\u000C' || // form feed
-            c === '\u000D' || // carriage return
-            c === '\u2028' || // unicode line separator
-            c === '\u2028'    // unicode paragraph separator
-		);
+		        c === '\u0009' || // horizontal tab
+		        c === '\u000A' || // new line
+		        c === '\u000C' || // form feed
+		        c === '\u000D');  // carriage return
 	}
 
 	function collectCharacters(regEx) {
