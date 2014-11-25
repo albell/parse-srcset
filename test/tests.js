@@ -150,7 +150,7 @@ var tests = [
 			{srcset: 'data:,a 1x 1e1.5x',  expect: '',        desc: '1x 1e1.5x'},
 			{srcset: 'data:,a 1.0x',       expect: 'data:,a', desc: '1.0x'},
 			{srcset: 'data:,a 1x 1.0x',    expect: '',        desc: '1x 1.0x'},
-			{srcset: 'data:,a +1x',        expect: 'data:,a', desc: 'plus sign x descriptor'},
+			{srcset: 'data:,a +1x',        expect: '',        desc: 'no plus sign allowed on floating point number'},
 			{srcset: 'data:,a 1X',         expect: '',        desc: 'Capital X descriptor'},
 			{srcset: 'data:,a Infinityx',  expect: '',        desc: 'Infinityx'},
 			{srcset: 'data:,a NaNx',       expect: '',        desc: 'NaNx'},

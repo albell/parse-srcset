@@ -25,10 +25,12 @@ function parseSrcset(input) {
 	var regexTrailingCommas = /[,]+$/;
 	var regexInteger = /^[-+]?\d+$/;
 	
-	// ( +/- or unsigned integers or decimals, without or without exponents.
+	// ( Positive or negative or unsigned integers or decimals, without or without exponents.
 	// Must include at least one digit.
-	// According to spec tests any decimal point must be followed by a digit.)
-	var regexFloatingPoint = /^[+-]?(?:[0-9]+|[0-9]*\.[0-9]+)(?:[eE][+-]?[0-9]+)?$/;
+	// According to spec tests any decimal point must be followed by a digit.
+	// No leading plus sign is allowed.)
+	// https://html.spec.whatwg.org/multipage/infrastructure.html#valid-floating-point-number 
+	var regexFloatingPoint = /^-?(?:[0-9]+|[0-9]*\.[0-9]+)(?:[eE][+-]?[0-9]+)?$/;
 
 	var url;
 	var descriptors;
