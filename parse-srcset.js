@@ -233,8 +233,7 @@ function parseSrcset(input) {
 
 	/**
 	* Adds descriptor properties to a candidate, pushes to the candidates array
-	* @param {Array} descriptor strings
-	* @return {Object} candidate with valid descriptor properties, or false if any error
+	* @return undefined
 	*/
 	// Declared outside of the while loop so that it's only created once.
 	function parseDescriptors() {
@@ -317,7 +316,7 @@ function parseSrcset(input) {
 		} else if (window.console && console.log) {
 				console.log('Invalid srcset descriptor found in "' + input + '" at "' + desc + '".');
 		}
-	} // (close parseDescriptor fn)
+	} // (close parseDescriptors fn)
 
 }
 
