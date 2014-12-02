@@ -23,7 +23,7 @@ function parseSrcset(input) {
 	var regexLeadingCommasOrSpaces = /^[, \t\n\r\u000c]+/;
 	var regexLeadingNotSpaces = /^[^ \t\n\r\u000c]+/;
 	var regexTrailingCommas = /[,]+$/;
-	var regexInteger = /^[-+]?\d+$/;
+	var regexNonNegativeInteger = /^\d+$/;
 	
 	// ( Positive or negative or unsigned integers or decimals, without or without exponents.
 	// Must include at least one digit.
@@ -262,7 +262,7 @@ function parseSrcset(input) {
 
 			// If the descriptor consists of a valid non-negative integer followed by
 			// a U+0077 LATIN SMALL LETTER W character
-			if (value.match(regexInteger) && (intVal >= 0) && (lastChar === 'w')) {
+			if (value.match(regexNonNegativeInteger) && (lastChar === 'w')) {
 			
 				// If width and density are not both absent, then let error be yes.
 				if (w || d) {pError = true;}
@@ -289,7 +289,7 @@ function parseSrcset(input) {
 			
 			// If the descriptor consists of a valid non-negative integer followed by
 			// a U+0068 LATIN SMALL LETTER H character
-			else if (value.match(regexInteger) && (intVal >= 0) && (lastChar === "h")) {
+			else if (value.match(regexNonNegativeInteger) && (lastChar === "h")) {
 			
 				// If height and density are not both absent, then let error be yes.
 				if (h || d) {pError = true;}
