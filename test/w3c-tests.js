@@ -1,7 +1,7 @@
 // Adapted from the W3C srcset conformance checker at:
 // http://w3c-test.org/html/semantics/embedded-content/the-img-element/srcset/parse-a-srcset-attribute.html
 
-var tests = [
+var w3Ctests = [
 	{
 		groupName: "Splitting Loop",
 		testArray: [

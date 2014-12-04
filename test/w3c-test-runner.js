@@ -43,8 +43,10 @@ function runTestGroup(testGroup) {
 		runTest(testArray[j]);
 	}
 }
+var i,j;
+var w3CtestsLength = w3Ctests.length;
 
-for (var i=0; i< tests.length; i++) {
-		runTestGroup(tests[i]);
+for (i = 0; i < w3CtestsLength; i++) {
+		runTestGroup(w3Ctests[i]);
 }
 
