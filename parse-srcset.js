@@ -262,7 +262,7 @@ function parseSrcset(input) {
 
 			// If the descriptor consists of a valid non-negative integer followed by
 			// a U+0077 LATIN SMALL LETTER W character
-			if (value.match(regexNonNegativeInteger) && (lastChar === 'w')) {
+			if (regexNonNegativeInteger.test(value) && (lastChar === 'w')) {
 			
 				// If width and density are not both absent, then let error be yes.
 				if (w || d) {pError = true;}
@@ -275,7 +275,7 @@ function parseSrcset(input) {
 
 			// If the descriptor consists of a valid floating-point number followed by
 			// a U+0078 LATIN SMALL LETTER X character
-			else if (value.match(regexFloatingPoint) && (lastChar === 'x')) {
+			else if (regexFloatingPoint.test(value) && (lastChar === 'x')) {
 
 				// If width, density and future-compat-h are not all absent, then let error
 				// be yes.				
@@ -289,7 +289,7 @@ function parseSrcset(input) {
 			
 			// If the descriptor consists of a valid non-negative integer followed by
 			// a U+0068 LATIN SMALL LETTER H character
-			else if (value.match(regexNonNegativeInteger) && (lastChar === "h")) {
+			else if (regexNonNegativeInteger.test(value) && (lastChar === "h")) {
 			
 				// If height and density are not both absent, then let error be yes.
 				if (h || d) {pError = true;}
