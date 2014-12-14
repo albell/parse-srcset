@@ -309,9 +309,14 @@ function parseSrcset(input) {
 		// density density if not absent. Otherwise, there is a parse error.
 		if (!pError) {
 			candidate.url = url;
-			if (w) { candidate.w = w;}
 			if (d) { candidate.d = d;}
 			if (h) { candidate.h = h;}
+			if (w) {
+				candidate.w = w;
+				candidates.hasW = true;
+			}
+			if (!h && !d && !w) {candidate.d = 1;}
+			if (candidate.d == 1) {candidates.has1x = true;}
 			candidates.push(candidate);
 		} else if (window.console && console.log) {
 				console.log('Invalid srcset descriptor found in "' + input + '" at "' + desc + '".');
