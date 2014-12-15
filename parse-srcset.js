@@ -5,7 +5,7 @@
  *
  * JS Parser for the string value that appears in markup <img srcset="here">
  *
- * @returns Array [{url: _, x: _, w: _, h:_}, ...]
+ * @returns Array [{url: _, d: _, w: _, h:_}, ...]
  *
  * Based super duper closely on the reference algorithm at:
  * https://html.spec.whatwg.org/multipage/embedded-content.html#parse-a-srcset-attribute
