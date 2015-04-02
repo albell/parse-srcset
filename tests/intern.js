@@ -45,11 +45,6 @@ define({
 
 	// Name of the tunnel class to use for WebDriver tests
 	tunnel: 'SauceLabsTunnel',
-	
-	tunnelOptions: {
-		username: 'alexbell',
-		accessKey: '53024820-cd8b-4cdf-86f0-1a705152e130'
-	},
 
 	// The desired AMD loader to use when running unit tests (client.html/client.js).
 	// Omit to use the default Dojo loader.
