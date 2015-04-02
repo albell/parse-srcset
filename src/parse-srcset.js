@@ -305,7 +305,7 @@ function parseSrcset(input) {
 			if (d) { candidate.d = d;}
 			if (h) { candidate.h = h;}
 			candidates.push(candidate);
-		} else if (window.console && console.log) {
+		} else if (window && window.console && console.log) {
 				console.log("Invalid srcset descriptor found in '" +
 					input + "' at '" + desc + "'.");
 		}
