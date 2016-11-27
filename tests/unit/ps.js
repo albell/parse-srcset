@@ -4,8 +4,8 @@ define(function (require) {
 	// Not really Chai but a Chai-compatible "assert" library for old IE.
 	var assert = require('intern/chai!assert'); 
 	
-	// The".js" indicates that it isn't an AMD module.
-	var parseF = require('../../src/parse-srcset.js');
+	// parse-srcset is an AMD module.
+	var parseSrcset = require('../../src/parse-srcset');
 	
 	var he = require('tests/he');
 	
