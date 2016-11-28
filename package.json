@@ -7,7 +7,7 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "intern-client config=tests/intern"
   },
   "repository": {
     "type": "git",
@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/albell/parse-srcset/issues"
   },
-  "homepage": "https://github.com/albell/parse-srcset#readme"
+  "homepage": "https://github.com/albell/parse-srcset#readme",
+  "devDependencies": {
+    "intern-geezer": "^2.2.3"
+  }
 }
