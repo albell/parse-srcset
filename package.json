@@ -1,6 +1,6 @@
 {
   "name": "parse-srcset",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A javascript parser for the HTML5 srcset attribute",
   "main": "src/parse-srcset.js",
   "directories": {
